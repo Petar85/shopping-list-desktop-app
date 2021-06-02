@@ -1,0 +1,22 @@
+{
+  "name": "shopping-list-desktop-app",
+  "version": "1.0.0",
+  "description": "Shopping list desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Petar85/shopping-list-desktop-app.git"
+  },
+  "author": "Petar Zivkovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Petar85/shopping-list-desktop-app/issues"
+  },
+  "homepage": "https://github.com/Petar85/shopping-list-desktop-app#readme",
+  "dependencies": {
+    "electron": "^13.0.1"
+  }
+}
