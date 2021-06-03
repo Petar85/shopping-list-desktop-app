@@ -31,7 +31,10 @@ const mainMenuTemplate = [
         label:'File',
         submenu:[
             {
-                label:'Add Item'
+                label:'Add Item',
+                click(){
+                    createAddWindow();
+                }
             },
             {
                 label:'Clear Items'
