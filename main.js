@@ -19,6 +19,11 @@ app.on('ready', function(){
         slashes: true
     }));
 
+    // quit app when closed
+    mainWindow.on('closed', function(){
+        app.quit();
+    });
+
     // build menu from template
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
 
@@ -40,6 +45,11 @@ function createAddWindow(){
         protocol:'file:',
         slashes: true
     }));
+
+    // garbage collection handle
+    addWindow.on('close', function(){
+        addWindow = null;
+    });
 }
 
 // create menu template
@@ -67,3 +77,8 @@ const mainMenuTemplate = [
         ]
     }
 ];
+
+// if mac add empty object to menu
+if(process.platform == 'darwin'){
+    mainMenuTemplate.unshift({});
+}
